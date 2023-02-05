@@ -1,9 +1,9 @@
 import numpy as np
 
 def rotate(v, b):
-    ux = v[0]*cos(b)-v[1]*sin(b)
-    uy = v[1]*cos(b)+v[0]*sin(b)
-    return [ux, uy]
+    ux = v[0]*np.cos(b)-v[1]*np.sin(b)
+    uy = v[1]*np.cos(b)+v[0]*np.sin(b)
+    return [ux, uy, 0]
 
 def vbtw2(p, q):
     v = [q[i]-p[i] for i in range(3)]
