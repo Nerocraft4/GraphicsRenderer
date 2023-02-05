@@ -1,10 +1,4 @@
 from graphics import *
-import numpy as np
-
-def rotate(v, b):
-    ux = v[0]*cos(b)-v[1]*sin(b)
-    uy = v[1]*cos(b)+v[0]*sin(b)
-    return [ux, uy]
 
 DIM = 500
 def mkpoint(x, y):
@@ -20,7 +14,7 @@ def main():
     line.draw(win)
     og = mkpoint(-150, 150)
     ry = [0.5,-3]
-    
+
     og.draw(win)
 
     win.getMouse()
