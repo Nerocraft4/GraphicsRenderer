@@ -67,7 +67,8 @@ class Vector:
                 col, seg = element.point_in_seg(endpoint)
                 if col:
                     deg = self.degrr(seg)
-                    return endpoint, element, deg
+                    # it should be deg*cc/length^2, but by the moment...
+                    return endpoint, element, deg*cc/length #darker if further
             cc+=dx
         return endpoint, None, 0
     def rtate(self, alpha):
